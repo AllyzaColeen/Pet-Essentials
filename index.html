@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title> Pet Essentials </title>
+</head>
+
+<body>
+    <header>
+
+        <img src="/images/Pet-Essentials-logo.png" alt="logo" id="logo">
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="#"> Home </a></li>
+                <li><a href="#"> Products/Services </a></li>
+                <li><a href="#"> Contact Us </a></li>
+                <li>
+                    <label for="search" class="form-inline">
+                        <input id="search" type="search" class="form-control mr-sm-2">
+                        <button class="btn btn-outline-success my-2 my-sm-0"> Search </button>
+                    </label>
+                </li>
+                <li>
+                    <a href=""><i class="fas fa-shopping-cart fa-2x" id="cart"></i> </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section id="carousel-slider">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-swiper-autoplay="500">
+                    <img src="https://www.pngitem.com/pimgs/m/40-408614_mobile-dog-grooming-clipart-hd-png-download.png" alt="">
+
+                </div>
+                <div class="swiper-slide"><img src="https://cdn.trendhunterstatic.com/thumbs/pet-grooming-product.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="https://pickpetvacuum.com/wp-content/uploads/2019/01/groom-your-pet-regularly.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://larchmontvillagevet.files.wordpress.com/2019/02/grooming-lab-bath-1024x682.jpg" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section id="featured-items">
+        <div>
+            <h3> Featured Items</h3>
+        </div>
+        <div id="card-items">
+            <div class="card">
+                <img class="card-img-top" src="/images/shampoo.jpg" alt="Card image cap">
+                <div class="card-body"> Pet Shampoo </div>
+                <button class="btn"> Buy </button>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/images/dog-soap.jpg" alt="Card image cap">
+                <div class="card-body"> Pet Soap </div>
+                <button class="btn"> Buy </button>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/images/Pet-Groomer.jpg" alt="Card image cap">
+                <div class="card-body"> Grooming services </div>
+                <button class="btn"> Inquire </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div id="about">
+            <h4> Overview </h4>
+            <p>Needing something for your fur baby's grooming essentials but have no time to visit stores? Are you very busy that you can't take your buddy to a salon but knows that he really needs to get a nice bath time?
+            </p>
+            <p>Great! If your answer is yes and yes, we're here to help you!
+            </p>
+            <p>Pet Essentials offers affordable yet quality services and products for your fur baby's / buddy's delicate needs. Our products are made of 100% non-toxic chemicals. Our main ingredients are carefully picked and scientifically tested on plants
+                and not on animals. And in terms of our services, our groomers are certified in grooming pets (you can visit their profile here: PetEssentailsGroomers.com). So we absolutely ensure you that you will have nothing to worry about in our products
+            </p>
+        </div>
+        <div id="contact-form">
+            <h4> Contact Us </h4>
+            <p>For more inquiries, you can drop us messages through this: </p>
+            <div id="form">
+                <form action="#">
+                    <label for="fname">First name:
+                        <input type="text" id="fname" name="fname" class="input">
+                    </label>
+                    <label for="lname">Last name:
+                        <input type="text" id="lname" name="lname" class="input">
+                    </label>
+                    <label for="message"> Message:
+                    <textarea type="text" id="message" name="message" placeholder="you can resize this box :) "></textarea>
+                    </label>
+                </form>
+                <button class="btn-block"> Send </button>
+            </div>
+        </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination'
+            },
+        });
+
+        var mySwiper = document.querySelector('.swiper-container').swiper
+
+        // Now you can use all slider methods like
+        mySwiper.autoplay.start();
+    </script>
+
+</body>
+
+</html>
