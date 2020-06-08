@@ -4,79 +4,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pet Essentials </title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Custom JavaScript-->
+    <script defer src="/js/script.js"></script>
+    <!-- Font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
-    <link rel="stylesheet" href="/css/style.css">
-    <title> Pet Essentials </title>
+
 </head>
 
 <body>
-    <header>
+    <!--------------------- Navbar ---------------------------------->
 
-        <img src="/images/Pet-Essentials-logo.png" alt="logo" id="logo">
+    <nav id="navbar">
+        <span class="open-slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <svg width="30" height="30">
+                        <path d="M0,5 30,5" stroke="#000" 
+                        stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke="#000" 
+                        stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke="#000" 
+                        stroke-width="5"/>
+                    </svg>
+                </a>
+            </span>
 
-        <nav id="navbar">
-            <ul>
-                <li><a href="#"> Home </a></li>
-                <li><a href="#"> Products/Services </a></li>
-                <li><a href="#"> Contact Us </a></li>
-                <li>
-                    <label for="search" class="form-inline">
-                        <input id="search" type="search" class="form-control mr-sm-2">
-                        <button class="btn btn-outline-success my-2 my-sm-0"> Search </button>
-                    </label>
-                </li>
-                <li>
-                    <a href=""><i class="fas fa-shopping-cart fa-2x" id="cart"></i> </a>
-                </li>
-            </ul>
+        <div class="cart-btn">
+            <span class="nav-icon">
+                <i class="fas fa-cart-plus fa-2x" onclick="openCart()"></i>
+            </span>
+            <div class="cart-items">0</div>
+        </div>
+    </nav>
 
-        </nav>
-    </header>
+    <div id="side-menu" class="side-nav">
+        <div><img src="/images/Pet-Essentials-logo.png" alt="logo" class="logo"></div>
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#"> Home </a>
+        <a href="#"> Products / Services </a>
+        <a href="#"> Contact Us </a>
+    </div>
+    <!--------------------- End of Navbar ---------------------------------->
 
+    <!--------------------- Hero section ----------------------------------->
     <section id="carousel-slider">
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" data-swiper-autoplay="500">
-                    <img src="https://www.pngitem.com/pimgs/m/40-408614_mobile-dog-grooming-clipart-hd-png-download.png" alt="">
-
+                <div class="swiper-slide image-1">
+                    <img src="/images/Pet-Essentials-logo.png" alt="logo" class="logo">
                 </div>
-                <div class="swiper-slide"><img src="https://cdn.trendhunterstatic.com/thumbs/pet-grooming-product.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="https://pickpetvacuum.com/wp-content/uploads/2019/01/groom-your-pet-regularly.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="https://larchmontvillagevet.files.wordpress.com/2019/02/grooming-lab-bath-1024x682.jpg" alt=""></div>
+                <div class="swiper-slide image-2"></div>
+                <div class="swiper-slide image-3">
+                    <p> Contact us now and Get 10% Discount</p>
+                    <p>on your pet's first home service with us!</p>
+                    <button class="btn btn-warning"><a href="#contact"> Contact Us Now </a></button>
+                </div>
+                <div class="swiper-slide image-4"></div>
+                <div class="swiper-slide image-5"></div>
+                <div class="swiper-slide image-6"></div>
+                <div class="swiper-slide image-2"></div>
+
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
+    <!--------------------- end of Hero section --------------------------->
 
-    <section id="featured-items">
-        <div>
-            <h3> Featured Items</h3>
+    <!--------------------- Products and Services ----------------------------------->
+    <section class="products">
+        <div class="section-title">
+            <h3> Our Products and Services Offered </h3>
         </div>
-        <div id="card-items">
-            <div class="card">
-                <img class="card-img-top" src="/images/shampoo.jpg" alt="Card image cap">
-                <div class="card-body"> Pet Shampoo </div>
-                <button class="btn"> Buy </button>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/images/dog-soap.jpg" alt="Card image cap">
-                <div class="card-body"> Pet Soap </div>
-                <button class="btn"> Buy </button>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/images/Pet-Groomer.jpg" alt="Card image cap">
-                <div class="card-body"> Grooming services </div>
-                <button class="btn"> Inquire </button>
-            </div>
+        <div class="product-center">
+            <article class="product">
+                <div class="img-container">
+                    <img src="/images/shampoo.jpg" alt="dog-shampoo" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>
+                        add to bag
+                    </button>
+                </div>
+                <h3> Pet Shampoo </h3>
+                <h4> $8.00 </h4>
+            </article>
+            <article class="product">
+                <div class="img-container">
+                    <img src="/images/dog-soap.jpg" alt="pet-soap" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>
+                        add to bag
+                    </button>
+                </div>
+                <h3> Pet Soap </h3>
+                <h4> $5.00 </h4>
+            </article>
+            <article class="product">
+                <div class="img-container">
+                    <img src="/images/dog-leash.jpg" alt="dog-leash" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>
+                        add to bag
+                    </button>
+                </div>
+                <h3> Dog Leash </h3>
+                <h4> $1.00 </h4>
+            </article>
+            <article class="product">
+                <div class="img-container">
+                    <img src="/images/Guinea-pig-food.jpg" alt="Guinea-pig-food" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>
+                        add to bag
+                    </button>
+                </div>
+                <h3> Guinea Pig Food </h3>
+                <h4> $4.00 </h4>
+            </article>
+            <article class="product">
+                <div class="img-container">
+                    <img src="/images/dog-house.jpg" alt="dog-house" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>
+                        add to bag
+                    </button>
+                </div>
+                <h3> Dog House </h3>
+                <h4> $18.00 </h4>
+            </article>
+            <article class="product">
+                <div class="img-container">
+                    <img src="/images/Pet Shampoos.jpeg" alt="Dog-Shampoos" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>
+                        add to bag
+                    </button>
+                </div>
+                <h3> Dog Shampoo </h3>
+                <h4> $3.00 </h4>
+            </article>
+
+            <article class="product">
+                <div class="img-container">
+                    <img src="/images/Pet-accessories.jpg" alt="dog-soap" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>
+                        add to bag
+                    </button>
+                </div>
+                <h3> Dog Accessories </h3>
+                <h4> $13.00 </h4>
+            </article>
+            <article class="product">
+                <div class="img-container">
+                    <img src="/images/Pet-Groomer.jpg" alt="product" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>
+                        inquire
+                    </button>
+                </div>
+                <h3> Services Offered </h3>
+            </article>
         </div>
     </section>
+    <!--------------------- end of Products and Services ----------------------------------->
 
+    <!--------------------- Contact and About section ----------------------------------->
     <section id="contact">
         <div id="about">
             <h4> Overview </h4>
@@ -85,14 +187,15 @@
             <p>Great! If your answer is yes and yes, we're here to help you!
             </p>
             <p>Pet Essentials offers affordable yet quality services and products for your fur baby's / buddy's delicate needs. Our products are made of 100% non-toxic chemicals. Our main ingredients are carefully picked and scientifically tested on plants
-                and not on animals. And in terms of our services, our groomers are certified in grooming pets (you can visit their profile here: PetEssentailsGroomers.com). So we absolutely ensure you that you will have nothing to worry about in our products
+                and not on animals. And in terms of our services, our groomers are certified in grooming pets (you can visit their profile here: <a href="#"> PetEssentailsGroomers.com </a>). So we absolutely ensure you that you will have nothing to worry
+                about in our products
             </p>
         </div>
         <div id="contact-form">
             <h4> Contact Us </h4>
             <p>For more inquiries, you can drop us messages through this: </p>
             <div id="form">
-                <form action="#">
+                <form action="#" autocomplete="off">
                     <label for="fname">First name:
                         <input type="text" id="fname" name="fname" class="input">
                     </label>
@@ -100,34 +203,14 @@
                         <input type="text" id="lname" name="lname" class="input">
                     </label>
                     <label for="message"> Message:
-                    <textarea type="text" id="message" name="message" placeholder="you can resize this box :) "></textarea>
+                    <textarea type="text" id="message" name="message" placeholder="You can resize this box if you want :) "></textarea>
                     </label>
                 </form>
                 <button class="btn-block"> Send </button>
             </div>
         </div>
     </section>
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
-    <!-- Initialize Swiper -->
-
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination'
-            },
-        });
-
-        var mySwiper = document.querySelector('.swiper-container').swiper
-
-        // Now you can use all slider methods like
-        mySwiper.autoplay.start();
-    </script>
+    <!--------------------- End of Contact and about section ----------------------------------->
 
 </body>
-
-</html>
