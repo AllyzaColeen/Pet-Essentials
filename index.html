@@ -14,8 +14,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
 
 
 </head>
@@ -39,9 +38,9 @@
 
         <div class="cart-btn">
             <span class="nav-icon">
-                <i class="fas fa-cart-plus fa-2x" onclick="openCart()"></i>
+                <i class="fas fa-cart-plus fa-3x my-cart-icon"></i>
             </span>
-            <div class="cart-items">0</div>
+            <div class="cart-items my-cart-badge">0</div>
         </div>
     </nav>
 
@@ -89,9 +88,9 @@
             <article class="product">
                 <div class="img-container">
                     <img src="/images/shampoo.jpg" alt="dog-shampoo" class="product-img">
-                    <button class="bag-btn" data-id="1">
+                    <button class="bag-btn my-cart-btn" data-id="1" data-name="Pet Shampoo" data-summary="summary 1" data-price="8" data-quantity="1" data-image="/images/shampoo.jpg">
                         <i class="fas fa-shopping-cart"></i>
-                        add to bag
+                        add to cart
                     </button>
                 </div>
                 <h3> Pet Shampoo </h3>
@@ -100,9 +99,9 @@
             <article class="product">
                 <div class="img-container">
                     <img src="/images/dog-soap.jpg" alt="pet-soap" class="product-img">
-                    <button class="bag-btn" data-id="1">
+                    <button class="bag-btn my-cart-btn" data-id="2" data-name="Pet Soap" data-summary="summary 2" data-price="5" data-quantity="1" data-image="/images/dog-soap.jpg">
                         <i class="fas fa-shopping-cart"></i>
-                        add to bag
+                        add to cart
                     </button>
                 </div>
                 <h3> Pet Soap </h3>
@@ -111,20 +110,20 @@
             <article class="product">
                 <div class="img-container">
                     <img src="/images/dog-leash.jpg" alt="dog-leash" class="product-img">
-                    <button class="bag-btn" data-id="1">
+                    <button class="bag-btn my-cart-btn" data-id="3" data-name="Dog Leash" data-summary="summary 3" data-price="2" data-quantity="1" data-image="/images/dog-leash.jpg">
                         <i class="fas fa-shopping-cart"></i>
-                        add to bag
+                        add to cart
                     </button>
                 </div>
                 <h3> Dog Leash </h3>
-                <h4> $1.00 </h4>
+                <h4> $2.00 </h4>
             </article>
             <article class="product">
                 <div class="img-container">
                     <img src="/images/Guinea-pig-food.jpg" alt="Guinea-pig-food" class="product-img">
-                    <button class="bag-btn" data-id="1">
+                    <button class="bag-btn my-cart-btn" data-id="4" data-name="Guinea Pig Food" data-summary="summary 4" data-price="4" data-quantity="1" data-image="/images/Guinea-pig-food.jpg">
                         <i class="fas fa-shopping-cart"></i>
-                        add to bag
+                        add to cart
                     </button>
                 </div>
                 <h3> Guinea Pig Food </h3>
@@ -133,9 +132,9 @@
             <article class="product">
                 <div class="img-container">
                     <img src="/images/dog-house.jpg" alt="dog-house" class="product-img">
-                    <button class="bag-btn" data-id="1">
+                    <button class="bag-btn my-cart-btn" data-id="5" data-name="Dog House" data-summary="summary 5" data-price="18" data-quantity="1" data-image="/images/dog-house.jpg">
                         <i class="fas fa-shopping-cart"></i>
-                        add to bag
+                        add to cart
                     </button>
                 </div>
                 <h3> Dog House </h3>
@@ -144,9 +143,9 @@
             <article class="product">
                 <div class="img-container">
                     <img src="/images/Pet Shampoos.jpeg" alt="Dog-Shampoos" class="product-img">
-                    <button class="bag-btn" data-id="1">
+                    <button class="bag-btn my-cart-btn" data-id="6" data-name="Pet Shampoo" data-summary="summary 6" data-price="3" data-quantity="1" data-image="/images/Pet Shampoos.jpeg">
                         <i class="fas fa-shopping-cart"></i>
-                        add to bag
+                        add to cart
                     </button>
                 </div>
                 <h3> Dog Shampoo </h3>
@@ -156,9 +155,9 @@
             <article class="product">
                 <div class="img-container">
                     <img src="/images/Pet-accessories.jpg" alt="dog-soap" class="product-img">
-                    <button class="bag-btn" data-id="1">
+                    <button class="bag-btn my-cart-btn" data-id="7" data-name="Dog Accessories" data-summary="summary 7" data-price="13" data-quantity="1" data-image="/images/Pet-accessories.jpg">
                         <i class="fas fa-shopping-cart"></i>
-                        add to bag
+                        add to cart
                     </button>
                 </div>
                 <h3> Dog Accessories </h3>
@@ -197,10 +196,13 @@
             <div id="form">
                 <form action="#" autocomplete="off">
                     <label for="fname">First name:
-                        <input type="text" id="fname" name="fname" class="input">
+                        <input type="text" id="fname" name="fname" class="input" required>
                     </label>
                     <label for="lname">Last name:
-                        <input type="text" id="lname" name="lname" class="input">
+                        <input type="text" id="lname" name="lname" class="input" required>
+                    </label>
+                    <label for="email">Email:
+                        <input type="email" id="email" name="email" class="input" required>
                     </label>
                     <label for="message"> Message:
                     <textarea type="text" id="message" name="message" placeholder="You can resize this box if you want :) "></textarea>
@@ -212,5 +214,20 @@
     </section>
 
     <!--------------------- End of Contact and about section ----------------------------------->
+    <!--------------------------------------- Footer ----------------------------------------->
 
+    <!--------------------------------------- End of Footer --------------------------------------->
+
+
+
+    <!--------------------------------------- Checkout --------------------------------------->
+
+    <!--------------------------------------- End of Checkout --------------------------------------->
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="js/jquery.mycart.js"></script>
 </body>
