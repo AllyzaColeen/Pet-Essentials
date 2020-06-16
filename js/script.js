@@ -1,15 +1,3 @@
-// For side-menu
-function openSlideMenu() {
-    document.getElementById('side-menu').style.width = '250px';
-    document.getElementById('main').style.marginLeft = '250px';
-}
-
-function closeSlideMenu() {
-    document.getElementById('side-menu').style.width = '0';
-    document.getElementById('main').style.marginLeft = '0';
-}
-
-
 // For auto-slideshow
 // initialize swiper
 var swiper = new Swiper('.swiper-container', {
@@ -49,7 +37,7 @@ $(function() {
     }
 
     $('.my-cart-btn').myCart({
-        currencySymbol: '$',
+        currencySymbol: 'Php',
         classCartIcon: 'my-cart-icon',
         classCartBadge: 'my-cart-badge',
         classProductQuantity: 'my-product-quantity',

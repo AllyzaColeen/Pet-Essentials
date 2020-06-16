@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,48 +21,92 @@ body {
     background-attachment: fixed;
 }
 
-
-/*-------------------------- Navbar -------------------------------------*/
-
-#navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    padding: 20px;
-    background-color: rgba(135, 206, 235, 0.2);
-    z-index: 2;
-}
-
-#navbar ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#navbar ul li {
-    font-size: 1.2em;
-    margin: 0 10px;
+li {
     list-style: none;
 }
 
+.button {
+    background-color: #ffbbad;
+    font-size: 1.5vw;
+    width: auto;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+.fa,
+.fas,
+.fab {
+    cursor: pointer;
+    font-size: 2vw;
+    color: rgba(0, 0, 0, .7);
+}
+
+
+/*-------------------------- Navbar -------------------------------------*/
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f8d8bb;
+    padding: 5px;
+}
+
+.header {
+    padding: 5px;
+    background: #b1a7d1;
+    height: 5vh;
+    color: #f1f1f1;
+}
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 30;
+}
+
+.navbar-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+.navbar-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .logo {
+    width: 12vw;
+    z-index: 1;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+input::placeholder {
+    font-size: 1.5vw;
     text-align: center;
-    width: 50%;
-    height: auto;
+}
+
+.search-input {
+    text-align: center;
+    font-size: 1.5vw;
+    padding: .6vw;
+    width: 60vw;
+    outline: none;
+    border: none;
 }
 
 
 /*-- For Cart --*/
-
-#cart {
-    width: 50px;
-    text-align: center;
-}
 
 .cart-btn {
     position: relative;
@@ -71,64 +116,57 @@ body {
 
 .cart-items {
     position: absolute;
+    font-size: 1vw;
     top: -8px;
     right: -8px;
     background: var(--primaryColor);
-    padding: 0 5px;
+    padding: .5vw;
     border-radius: 30%;
     color: var(--mainWhite);
+    background-color: rgba(248, 254, 231, 0.8);
 }
 
 
-/*-- For side nav */
+/*---------- Sidenav starts here----------*/
 
-.side-nav a {
-    float: left;
-    color: aliceblue;
-    display: block;
-    text-align: center;
-    padding: 10px 12px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.side-nav {
-    height: 100%;
-    width: 0;
+#pinterest,
+#twitter,
+#instagram {
     position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(135, 206, 235, 0.8);
-    opacity: 0.9;
-    overflow-x: hidden;
-    /*disable the scrolling horizontally and to hide it inside the svg*/
-    padding-top: 50px;
-    transition: 500ms;
+    padding: 20px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 0 5px 5px 0;
     z-index: 2;
 }
 
-.side-nav a {
-    padding: 10px;
-    text-align: left;
-    display: block;
-    text-decoration: none;
-    color: var(--mainBlack);
-    font-size: 22px;
-    transition: 500ms;
+#pinterest:hover,
+#twitter:hover,
+#instagram:hover {
+    padding-left: 100px;
 }
 
-.side-nav a:hover {
-    color: blue;
-    transition: 300ms;
-    text-decoration: none;
+#pinterest {
+    left: -70px;
+    top: 30vh;
+    background: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+    z-index: 2;
 }
 
-.side-nav .btn-close {
-    position: absolute;
-    top: 0px;
-    left: 200px;
-    font-size: 50px;
+#twitter {
+    left: -55px;
+    top: 40vh;
+    background: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
+
+#instagram {
+    left: -75px;
+    top: 50vh;
+    background: linear-gradient(315deg, #bf3a30 0%, #864ba2 74%);
+}
+
+
+/*---------- Sidenav ends here----------*/
 
 
 /*-------------------------- End of Navbar -------------------------------------*/
@@ -142,7 +180,7 @@ body {
     height: auto;
     font-size: 14px;
     color: #000;
-    margin: 0;
+    margin-top: 100px;
     padding: 0;
     border-bottom: rgba(0, 0, 0, 0.3) 2px solid;
 }
