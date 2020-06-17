@@ -16,9 +16,12 @@
 
 body {
     font-family: sans-serif;
-    background: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+    background: url(https://images.pexels.com/photos/132193/pexels-photo-132193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+    background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 li {
@@ -28,18 +31,14 @@ li {
 .button {
     background-color: #ffbbad;
     font-size: 1.5vw;
-    width: auto;
     padding: 10px;
     outline: none;
     border: none;
 }
 
-.fa,
-.fas,
-.fab {
-    cursor: pointer;
-    font-size: 2vw;
-    color: rgba(0, 0, 0, .7);
+.logo {
+    width: 12vw;
+    z-index: 1;
 }
 
 
@@ -47,18 +46,10 @@ li {
 
 .header-nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     background-color: #f8d8bb;
-    padding: 5px;
-}
-
-.header {
-    padding: 5px;
-    background: #b1a7d1;
-    height: 5vh;
-    color: #f1f1f1;
+    padding-top: 5px;
 }
 
 .navbar-container {
@@ -80,15 +71,14 @@ li {
     justify-content: space-evenly;
 }
 
-.logo {
-    width: 12vw;
-    z-index: 1;
+.navbar-container ul a {
+    color: black;
+    font-size: 1.5vw;
 }
 
 .search-bar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
 }
 
 input::placeholder {
@@ -99,7 +89,6 @@ input::placeholder {
 .search-input {
     text-align: center;
     font-size: 1.5vw;
-    padding: .6vw;
     width: 60vw;
     outline: none;
     border: none;
@@ -120,10 +109,15 @@ input::placeholder {
     top: -8px;
     right: -8px;
     background: var(--primaryColor);
-    padding: .5vw;
+    padding: 5px;
     border-radius: 30%;
-    color: var(--mainWhite);
+    color: var(--mainBlack);
+    font-weight: 800;
     background-color: rgba(248, 254, 231, 0.8);
+}
+
+.fa-cart-plus {
+    font-size: 2.5vw;
 }
 
 
@@ -176,102 +170,33 @@ input::placeholder {
 
 #carousel-slider {
     position: relative;
+    top: -22px;
     max-width: 100%;
     height: auto;
     font-size: 14px;
     color: #000;
     margin-top: 100px;
-    padding: 0;
-    border-bottom: rgba(0, 0, 0, 0.3) 2px solid;
 }
 
-#carousel-slider .image-1 {
-    background: url(https://images.pexels.com/photos/46024/pexels-photo-46024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: auto;
+.carousel-slider img {
+    width: 100%;
+    height: 100%;
 }
 
-#carousel-slider .image-2 {
-    background-image: url(/images/pet-products.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-}
-
-#carousel-slider .image-3 {
-    background: url(https://images.pexels.com/photos/4148861/pexels-photo-4148861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-}
-
-#carousel-slider .image-4 {
-    background: url(https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-}
-
-#carousel-slider .image-5 {
-    background: url(https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-}
-
-#carousel-slider .image-6 {
-    background: url(https://images.pexels.com/photos/1643456/pexels-photo-1643456.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-}
-
-.image-3 .btn a {
-    font-size: 4rem;
-    color: var(--mainBlack);
-    text-decoration: none;
-}
-
-.image-3 p {
-    font-size: 4rem;
-    background-color: rgba(241, 239, 239, 0.5);
+.swiper-slide button {
+    font-size: 3vw;
+    z-index: 20;
 }
 
 .swiper-container {
-    max-width: 100%;
-    height: 90vh;
+    width: 100vw;
+    height: auto;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #ffffff;
+    background-color: #864ba2;
 }
 
 
@@ -281,7 +206,7 @@ input::placeholder {
 /*-------------------------- Featured Items -------------------------------------*/
 
 .products {
-    padding: 4rem 0;
+    padding: 0 50px;
     text-align: center;
 }
 
@@ -294,13 +219,9 @@ input::placeholder {
 }
 
 .product-center {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: 1170px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .img-container {
@@ -336,20 +257,19 @@ input::placeholder {
 }
 
 .product {
-    background: var(--mainWhite);
+    background: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-
-.product h3 {
-    font-size: 2rem;
+    align-items: center;
+    width: 250px;
+    margin: 10px;
 }
 
 .product-img {
     display: block;
-    width: 100%;
-    min-height: 12rem;
+    width: 250px;
+    padding: 10px;
     transition: var(--mainTransition);
 }
 
@@ -359,7 +279,7 @@ input::placeholder {
 
 .product h3 {
     text-transform: capitalize;
-    font-size: 1.1rem;
+    font-size: 20px;
     margin-top: 1rem;
     letter-spacing: var(--mainSpacing);
     text-align: center;
@@ -368,8 +288,12 @@ input::placeholder {
 .product h4 {
     margin-top: 0.7rem;
     letter-spacing: var(--mainSpacing);
-    color: var(--primaryColor);
+    color: var(--mainBlack);
     text-align: center;
+}
+
+.btn-2 {
+    display: none;
 }
 
 
@@ -385,7 +309,7 @@ input::placeholder {
     justify-content: space-around;
     background-color: #ffffff;
     border: rgba(0, 0, 0, 0.3) 2px solid;
-    padding: 20px;
+    padding: 40px;
 }
 
 #about {
@@ -400,20 +324,21 @@ input::placeholder {
     align-items: center;
 }
 
-form {
+.contact-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
-.input {
+.input,
+textarea {
     border-top: none;
     border-right: none;
     border-left: none;
     outline: none;
     margin: 5px;
-    width: 400px;
+    width: 35vw;
     min-height: 2px;
 }
 

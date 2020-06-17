@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pet Essentials </title>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- Custom JavaScript-->
-    <script defer src="js/script.js"></script>
+    <script defer src="/js/script.js"></script>
     <!-- Font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <!-- Latest compiled and minified CSS -->
@@ -28,11 +28,24 @@
         <div class="navbar-flex">
             <!------------ Upper Navbar starts here ---------->
             <div class="header-nav">
-                <img class="logo" src="images/Pet-Essentials-logo.png" alt="Pet-Essentials-logo">
-                <form class="search-bar">
-                    <input class="search-input" type="search" placeholder="Search">
-                    <button class="button" type="button"><i class="fas fa-search"></i></button>
-                </form>
+                <img class="logo" src="/images/Pet-Essentials-logo.png" alt="Pet-Essentials-logo">
+                <div>
+                    <form class="search-bar">
+                        <input class="search-input" type="search" placeholder="Search">
+                        <button class="button" type="button"><i class="fas fa-search"></i></button>
+                    </form>
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#!">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!">Featured Items </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="cart-btn">
                     <span class="nav-icon">
                 <i class="fa fa-cart-plus my-cart-icon"></i>
@@ -41,48 +54,32 @@
                 </div>
             </div>
             <!------------ Lower Navbar starts here ---------->
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#!">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#!">Featured Items </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#!">Contact Us</a>
-                </li>
-            </ul>
+
             <!------------ Lower Navbar ends here ---------->
         </div>
     </div>
-    <!--------------------- End of Navbar ---------------------------------->
+    <!--------------------- End of Navbar -------------------------->
 
-    <!------------  Sidebar starts here ---------->
+    <!------------  Sidebar starts here -------->
 
     <div id="mySidenav" class="sidenav">
-        <a href="#" id="pinterest"> Pinterest <i class="fab fa-pinterest"></i> </a>
-        <a href="#" id="twitter">Twitter <i class="fab fa-twitter-square"></i></a>
-        <a href="#" id="instagram">Instagram <i class="fab fa-instagram"></i> </a>
+        <a href="#" id="pinterest"> Pinterest <i class="fab fa-pinterest fa-2x"></i> </a>
+        <a href="#" id="twitter">Twitter <i class="fab fa-twitter-square fa-2x"></i></a>
+        <a href="#" id="instagram">Instagram <i class="fab fa-instagram fa-2x"></i> </a>
     </div>
-    <!------------  Sidebar ends here ---------->
+    <!----------  Sidebar ends here ---------->
 
-    <!--------------------- Hero section ----------------------------------->
+    <!--------------------- Hero section ---------------------------->
     <section id="carousel-slider">
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide image-1">
-                    <img src="images/pet-products.png" class="img-responsive img-cus" alt="pet-products-discount">
+                    <img src="/images/pet-products.png" class="img-responsive img-cus" alt="pet-products-discount">
                 </div>
                 <div class="swiper-slide image-3 img-responsive img-cus">
-                    <p> Contact us now and Get 10% Discount</p>
-                    <p>on your pet's first home service with us!</p>
-                    <button class="btn btn-warning"><a href="#contact"> Contact Us Now </a></button>
+                    <img src="/images/contact-us-2.JPG" class="img-responsive img-cus" alt="pet-products-discount">
                 </div>
-                <div class="swiper-slide image-4"></div>
-                <div class="swiper-slide image-5"></div>
-                <div class="swiper-slide image-6"></div>
-                <div class="swiper-slide image-2"></div>
 
             </div>
             <!-- Add Pagination -->
@@ -90,10 +87,10 @@
         </div>
     </section>
 
-    <!--------------------- end of Hero section --------------------------->
+    <!--------------------- end of Hero section ---------------------->
 
 
-    <!--------------------- Products and Services ----------------------------------->
+    <!--------------------- Products and Services -------------------->
     <section class="products">
         <div class="section-title">
             <h3> Our Products and Services Offered </h3>
@@ -101,7 +98,7 @@
         <div class="product-center">
             <article class="product">
                 <div class="img-container">
-                    <img src="images/shampoo.jpg" alt="dog-shampoo" class="product-img">
+                    <img src="/images/shampoo.jpg" alt="dog-shampoo" class="product-img">
                     <button class="bag-btn my-cart-btn" data-id="1" data-name="Pet Shampoo" data-summary="summary 1" data-price="8" data-quantity="1" data-image="/images/shampoo.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
@@ -109,10 +106,14 @@
                 </div>
                 <h3> Pet Shampoo </h3>
                 <h4> $8.00 </h4>
+                <button class="button btn-2 my-cart-btn" data-id="1" data-name="Pet Shampoo" data-summary="summary 1" data-price="8" data-quantity="1" data-image="/images/shampoo.jpg">
+                    <i class="fas fa-shopping-cart"></i>
+                    add to cart
+                </button>
             </article>
             <article class="product">
                 <div class="img-container">
-                    <img src="images/dog-soap.jpg" alt="pet-soap" class="product-img">
+                    <img src="/images/dog-soap.jpg" alt="pet-soap" class="product-img">
                     <button class="bag-btn my-cart-btn" data-id="2" data-name="Pet Soap" data-summary="summary 2" data-price="5" data-quantity="1" data-image="/images/dog-soap.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
@@ -120,10 +121,14 @@
                 </div>
                 <h3> Pet Soap </h3>
                 <h4> $5.00 </h4>
+                <button class="button btn-2 my-cart-btn" data-id="2" data-name="Pet Soap" data-summary="summary 2" data-price="5" data-quantity="1" data-image="/images/dog-soap.jpg">
+                    <i class="fas fa-shopping-cart"></i>
+                    add to cart
+                </button>
             </article>
             <article class="product">
                 <div class="img-container">
-                    <img src="images/dog-leash.jpg" alt="dog-leash" class="product-img">
+                    <img src="/images/dog-leash.jpg" alt="dog-leash" class="product-img">
                     <button class="bag-btn my-cart-btn" data-id="3" data-name="Dog Leash" data-summary="summary 3" data-price="2" data-quantity="1" data-image="/images/dog-leash.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
@@ -131,10 +136,14 @@
                 </div>
                 <h3> Dog Leash </h3>
                 <h4> $2.00 </h4>
+                <button class="button btn-2 my-cart-btn" data-id="3" data-name="Dog Leash" data-summary="summary 3" data-price="2" data-quantity="1" data-image="/images/dog-leash.jpg">
+                    <i class="fas fa-shopping-cart"></i>
+                    add to cart
+                </button>
             </article>
             <article class="product">
                 <div class="img-container">
-                    <img src="images/Guinea-pig-food.jpg" alt="Guinea-pig-food" class="product-img">
+                    <img src="/images/Guinea-pig-food.jpg" alt="Guinea-pig-food" class="product-img">
                     <button class="bag-btn my-cart-btn" data-id="4" data-name="Guinea Pig Food" data-summary="summary 4" data-price="4" data-quantity="1" data-image="/images/Guinea-pig-food.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
@@ -142,10 +151,14 @@
                 </div>
                 <h3> Guinea Pig Food </h3>
                 <h4> $4.00 </h4>
+                <button class="button btn-2 my-cart-btn" data-id="4" data-name="Guinea Pig Food" data-summary="summary 4" data-price="4" data-quantity="1" data-image="/images/Guinea-pig-food.jpg">
+                    <i class="fas fa-shopping-cart"></i>
+                    add to cart
+                </button>
             </article>
             <article class="product">
                 <div class="img-container">
-                    <img src="images/dog-house.jpg" alt="dog-house" class="product-img">
+                    <img src="/images/dog-house.jpg" alt="dog-house" class="product-img">
                     <button class="bag-btn my-cart-btn" data-id="5" data-name="Dog House" data-summary="summary 5" data-price="18" data-quantity="1" data-image="/images/dog-house.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
@@ -153,10 +166,14 @@
                 </div>
                 <h3> Dog House </h3>
                 <h4> $18.00 </h4>
+                <button class="button btn-2 my-cart-btn" data-id="5" data-name="Dog House" data-summary="summary 5" data-price="18" data-quantity="1" data-image="/images/dog-house.jpg">
+                    <i class="fas fa-shopping-cart"></i>
+                    add to cart
+                </button>
             </article>
             <article class="product">
                 <div class="img-container">
-                    <img src="images/Pet Shampoos.jpeg" alt="Dog-Shampoos" class="product-img">
+                    <img src="/images/Pet Shampoos.jpeg" alt="Dog-Shampoos" class="product-img">
                     <button class="bag-btn my-cart-btn" data-id="6" data-name="Pet Shampoo" data-summary="summary 6" data-price="3" data-quantity="1" data-image="/images/Pet Shampoos.jpeg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
@@ -164,11 +181,15 @@
                 </div>
                 <h3> Dog Shampoo </h3>
                 <h4> $3.00 </h4>
+                <button class="button btn-2 my-cart-btn" data-id="6" data-name="Pet Shampoo" data-summary="summary 6" data-price="3" data-quantity="1" data-image="/images/Pet Shampoos.jpeg">
+                        <i class="fas fa-shopping-cart"></i>
+                        add to cart
+                    </button>
             </article>
 
             <article class="product">
                 <div class="img-container">
-                    <img src="images/Pet-accessories.jpg" alt="dog-soap" class="product-img">
+                    <img src="/images/Pet-accessories.jpg" alt="dog-soap" class="product-img">
                     <button class="bag-btn my-cart-btn" data-id="7" data-name="Dog Accessories" data-summary="summary 7" data-price="13" data-quantity="1" data-image="/images/Pet-accessories.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
@@ -176,16 +197,24 @@
                 </div>
                 <h3> Dog Accessories </h3>
                 <h4> $13.00 </h4>
+                <button class="button btn-2 my-cart-btn" data-id="7" data-name="Dog Accessories" data-summary="summary 7" data-price="13" data-quantity="1" data-image="/images/Pet-accessories.jpg">
+                    <i class="fas fa-shopping-cart"></i>
+                    add to cart
+                </button>
             </article>
             <article class="product">
                 <div class="img-container">
-                    <img src="images/Pet-Groomer.jpg" alt="product" class="product-img">
+                    <img src="/images/Pet-Groomer.jpg" alt="product" class="product-img">
                     <button class="bag-btn" data-id="1">
                         <i class="fas fa-shopping-cart"></i>
                         inquire
                     </button>
                 </div>
                 <h3> Services Offered </h3>
+                <a href="#contact-form"><button class="button btn-2" data-id="1">
+                    <i class="fas fa-shopping-cart"></i>
+                    inquire
+                </button></a>
             </article>
         </div>
     </section>
@@ -199,16 +228,16 @@
             </p>
             <p>Great! If your answer is yes and yes, we're here to help you!
             </p>
-            <p>Pet Essentials offers affordable yet quality services and products for your fur baby's / buddy's delicate needs. Our products are made of 100% non-toxic chemicals. Our main ingredients are carefully picked and scientifically tested on plants
-                and not on animals. And in terms of our services, our groomers are certified in grooming pets (you can visit their profile here: <a href="#"> PetEssentailsGroomers.com </a>). So we absolutely ensure you that you will have nothing to worry
-                about in our products
+            <p>Pet Essentials offers affordable yet quality services and products for your fur baby's delicate needs. Our products are made of 100% non-toxic chemicals. Our main ingredients are carefully picked and scientifically tested on plants and not
+                on animals. And in terms of our services, our groomers are certified in grooming pets (you can visit their profile here: <a href="#"> PetEssentailsGroomers.com </a>). So we absolutely ensure you that you will have nothing to worry about
+                in our products
             </p>
         </div>
         <div id="contact-form">
             <h4> Contact Us </h4>
             <p>For more inquiries, you can drop us messages through this: </p>
             <div id="form">
-                <form action="#" autocomplete="off">
+                <form autocomplete="off" action="#" class="contact-info">
                     <label for="fname">First name:
                         <input type="text" id="fname" name="fname" class="input" required>
                     </label>
@@ -222,7 +251,7 @@
                     <textarea type="text" id="message" name="message" placeholder="You can resize this box if you want :) "></textarea>
                     </label>
                 </form>
-                <button class="btn-block"> Send </button>
+                <button class="btn-block button"> Send </button>
             </div>
         </div>
     </section>
