@@ -1,9 +1,14 @@
+/*--------- Imports --------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=El+Messiri:wght@500&display=swap');
+
+/*---------- Styles starts here ---------*/
+
 :root {
     --primaryColor: rgb(135, 206, 235);
     --mainWhite: #ffffff;
     --mainBlack: #222222;
     --mainGrey: #ececec;
-    --mainSpacing: .1rem;
     --mainTransition: all 0.3s linear;
 }
 
@@ -15,7 +20,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Bellota', cursive, 'El Messiri', sans-serif;
     background: url(https://images.pexels.com/photos/132193/pexels-photo-132193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
     background-position: center center;
     background-size: cover;
@@ -29,8 +34,9 @@ li {
 }
 
 .button {
-    background-color: #ffbbad;
+    background-color: #fe5f75;
     font-size: 1.5vw;
+    color: black;
     padding: 10px;
     outline: none;
     border: none;
@@ -44,7 +50,8 @@ li {
 
 /*-------------------------- Navbar -------------------------------------*/
 
-.header-nav {
+.header-nav,
+.nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -74,6 +81,7 @@ li {
 .navbar-container ul a {
     color: black;
     font-size: 1.5vw;
+    font-family: 'El Messiri';
 }
 
 .search-bar {
@@ -117,7 +125,7 @@ input::placeholder {
 }
 
 .fa-cart-plus {
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 
 
@@ -127,7 +135,8 @@ input::placeholder {
 #twitter,
 #instagram {
     position: fixed;
-    padding: 20px 10px;
+    padding: 10px;
+    font-family: 'Bellota';
     text-decoration: none;
     color: white;
     border-radius: 0 5px 5px 0;
@@ -170,7 +179,7 @@ input::placeholder {
 
 #carousel-slider {
     position: relative;
-    top: -22px;
+    top: 0;
     max-width: 100%;
     height: auto;
     font-size: 14px;
@@ -205,23 +214,29 @@ input::placeholder {
 
 /*-------------------------- Featured Items -------------------------------------*/
 
-.products {
-    padding: 0 50px;
+#products {
+    margin: 50px;
     text-align: center;
 }
 
 .section-title h2 {
+    font-family: 'Bellota';
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     margin-bottom: 5rem;
     text-transform: capitalize;
     letter-spacing: var(--mainSpacing);
+    background-color: #f8d8bb;
 }
 
 .product-center {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    width: 90vw;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+    place-items: center;
 }
 
 .img-container {
@@ -230,6 +245,7 @@ input::placeholder {
 }
 
 .bag-btn {
+    font-family: 'El Messiri';
     position: absolute;
     top: 70%;
     right: 0;
@@ -263,7 +279,6 @@ input::placeholder {
     justify-content: space-evenly;
     align-items: center;
     width: 250px;
-    margin: 10px;
 }
 
 .product-img {
@@ -278,22 +293,22 @@ input::placeholder {
 }
 
 .product h3 {
+    font-family: 'Bellota';
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 2vw;
+    font-weight: 900;
     margin-top: 1rem;
     letter-spacing: var(--mainSpacing);
     text-align: center;
 }
 
 .product h4 {
+    font-family: 'Bellota';
+    font-size: 2vw;
     margin-top: 0.7rem;
     letter-spacing: var(--mainSpacing);
     color: var(--mainBlack);
     text-align: center;
-}
-
-.btn-2 {
-    display: none;
 }
 
 
@@ -344,3 +359,31 @@ textarea {
 
 
 /*-------------------------- End of Contacts and About  -------------------------------------*/
+
+@media (max-width: 900px) {
+    .fa-cart-plus {
+        font-size: 5vw;
+    }
+    #carousel-slider {
+        top: -40px;
+    }
+    .navbar-container ul a {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .product-center {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        place-items: center;
+    }
+    .product-img {
+        width: 120px;
+    }
+    .product {
+        width: 130px;
+    }
+    .bag-btn {
+        top: 60%;
+    }
+}
