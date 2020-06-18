@@ -11,6 +11,8 @@
     <script defer src="js/script.js"></script>
     <!-- Font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <!-------- Google Fonts ------------->
+    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=El+Messiri:wght@500&display=swap" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
@@ -34,17 +36,6 @@
                         <input class="search-input" type="search" placeholder="Search">
                         <button class="button" type="button"><i class="fas fa-search"></i></button>
                     </form>
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#!">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!">Featured Items </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!">Contact Us</a>
-                        </li>
-                    </ul>
                 </div>
                 <div class="cart-btn">
                     <span class="nav-icon">
@@ -53,6 +44,17 @@
                     <div class="cart-items my-cart-badge">0</div>
                 </div>
             </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#carousel-slider">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Featured Items </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-form">Contact Us</a>
+                </li>
+            </ul>
             <!------------ Lower Navbar starts here ---------->
 
             <!------------ Lower Navbar ends here ---------->
@@ -91,10 +93,7 @@
 
 
     <!--------------------- Products and Services -------------------->
-    <section class="products">
-        <div class="section-title">
-            <h3> Our Products and Services Offered </h3>
-        </div>
+    <section id="products">
         <div class="product-center">
             <article class="product">
                 <div class="img-container">
@@ -106,109 +105,77 @@
                 </div>
                 <h3> Pet Shampoo </h3>
                 <h4> $8.00 </h4>
-                <button class="button btn-2 my-cart-btn" data-id="1" data-name="Pet Shampoo" data-summary="summary 1" data-price="8" data-quantity="1" data-image="/images/shampoo.jpg">
-                    <i class="fas fa-shopping-cart"></i>
-                    add to cart
-                </button>
             </article>
             <article class="product">
                 <div class="img-container">
                     <img src="images/dog-soap.jpg" alt="pet-soap" class="product-img">
-                    <button class="bag-btn my-cart-btn" data-id="2" data-name="Pet Soap" data-summary="summary 2" data-price="5" data-quantity="1" data-image="/images/dog-soap.jpg">
+                    <button class="bag-btn my-cart-btn" data-id="2" data-name="Pet Soap" data-summary="summary 2" data-price="5" data-quantity="1" data-image="images/dog-soap.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
                     </button>
                 </div>
                 <h3> Pet Soap </h3>
                 <h4> $5.00 </h4>
-                <button class="button btn-2 my-cart-btn" data-id="2" data-name="Pet Soap" data-summary="summary 2" data-price="5" data-quantity="1" data-image="/images/dog-soap.jpg">
-                    <i class="fas fa-shopping-cart"></i>
-                    add to cart
-                </button>
             </article>
             <article class="product">
                 <div class="img-container">
                     <img src="images/dog-leash.jpg" alt="dog-leash" class="product-img">
-                    <button class="bag-btn my-cart-btn" data-id="3" data-name="Dog Leash" data-summary="summary 3" data-price="2" data-quantity="1" data-image="/images/dog-leash.jpg">
+                    <button class="bag-btn my-cart-btn" data-id="3" data-name="Dog Leash" data-summary="summary 3" data-price="2" data-quantity="1" data-image="images/dog-leash.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
                     </button>
                 </div>
                 <h3> Dog Leash </h3>
                 <h4> $2.00 </h4>
-                <button class="button btn-2 my-cart-btn" data-id="3" data-name="Dog Leash" data-summary="summary 3" data-price="2" data-quantity="1" data-image="/images/dog-leash.jpg">
-                    <i class="fas fa-shopping-cart"></i>
-                    add to cart
-                </button>
             </article>
             <article class="product">
                 <div class="img-container">
                     <img src="images/Guinea-pig-food.jpg" alt="Guinea-pig-food" class="product-img">
-                    <button class="bag-btn my-cart-btn" data-id="4" data-name="Guinea Pig Food" data-summary="summary 4" data-price="4" data-quantity="1" data-image="/images/Guinea-pig-food.jpg">
+                    <button class="bag-btn my-cart-btn" data-id="4" data-name="Guinea Pig Food" data-summary="summary 4" data-price="4" data-quantity="1" data-image="images/Guinea-pig-food.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
                     </button>
                 </div>
                 <h3> Guinea Pig Food </h3>
                 <h4> $4.00 </h4>
-                <button class="button btn-2 my-cart-btn" data-id="4" data-name="Guinea Pig Food" data-summary="summary 4" data-price="4" data-quantity="1" data-image="/images/Guinea-pig-food.jpg">
-                    <i class="fas fa-shopping-cart"></i>
-                    add to cart
-                </button>
             </article>
             <article class="product">
                 <div class="img-container">
                     <img src="images/dog-house.jpg" alt="dog-house" class="product-img">
-                    <button class="bag-btn my-cart-btn" data-id="5" data-name="Dog House" data-summary="summary 5" data-price="18" data-quantity="1" data-image="/images/dog-house.jpg">
+                    <button class="bag-btn my-cart-btn" data-id="5" data-name="Dog House" data-summary="summary 5" data-price="18" data-quantity="1" data-image="images/dog-house.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
                     </button>
                 </div>
                 <h3> Dog House </h3>
                 <h4> $18.00 </h4>
-                <button class="button btn-2 my-cart-btn" data-id="5" data-name="Dog House" data-summary="summary 5" data-price="18" data-quantity="1" data-image="/images/dog-house.jpg">
-                    <i class="fas fa-shopping-cart"></i>
-                    add to cart
-                </button>
             </article>
             <article class="product">
                 <div class="img-container">
                     <img src="images/Pet Shampoos.jpeg" alt="Dog-Shampoos" class="product-img">
-                    <button class="bag-btn my-cart-btn" data-id="6" data-name="Pet Shampoo" data-summary="summary 6" data-price="3" data-quantity="1" data-image="/images/Pet Shampoos.jpeg">
+                    <button class="bag-btn my-cart-btn" data-id="6" data-name="Pet Shampoo" data-summary="summary 6" data-price="3" data-quantity="1" data-image="images/Pet Shampoos.jpeg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
                     </button>
                 </div>
                 <h3> Dog Shampoo </h3>
                 <h4> $3.00 </h4>
-                <button class="button btn-2 my-cart-btn" data-id="6" data-name="Pet Shampoo" data-summary="summary 6" data-price="3" data-quantity="1" data-image="/images/Pet Shampoos.jpeg">
-                        <i class="fas fa-shopping-cart"></i>
-                        add to cart
-                    </button>
             </article>
 
             <article class="product">
                 <div class="img-container">
                     <img src="images/Pet-accessories.jpg" alt="dog-soap" class="product-img">
-                    <button class="bag-btn my-cart-btn" data-id="7" data-name="Dog Accessories" data-summary="summary 7" data-price="13" data-quantity="1" data-image="/images/Pet-accessories.jpg">
+                    <button class="bag-btn my-cart-btn" data-id="7" data-name="Dog Accessories" data-summary="summary 7" data-price="13" data-quantity="1" data-image="images/Pet-accessories.jpg">
                         <i class="fas fa-shopping-cart"></i>
                         add to cart
                     </button>
                 </div>
                 <h3> Dog Accessories </h3>
                 <h4> $13.00 </h4>
-                <button class="button btn-2 my-cart-btn" data-id="7" data-name="Dog Accessories" data-summary="summary 7" data-price="13" data-quantity="1" data-image="/images/Pet-accessories.jpg">
-                    <i class="fas fa-shopping-cart"></i>
-                    add to cart
-                </button>
             </article>
             <article class="product">
                 <div class="img-container">
                     <img src="images/Pet-Groomer.jpg" alt="product" class="product-img">
-                    <button class="bag-btn" data-id="1">
-                        <i class="fas fa-shopping-cart"></i>
-                        inquire
-                    </button>
                 </div>
                 <h3> Services Offered </h3>
                 <a href="#contact-form"><button class="button btn-2" data-id="1">
